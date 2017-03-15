@@ -47,3 +47,8 @@ fileID = fopen('data_in.txt','w');
 fprintf(fileID,'%d \n',Xn);
 fclose(fileID);
 
+%create .wav file and play
+wavwrite(Xn, Fs,'test.wav');
+[s,fs] =wavread('test.wav');
+sound(s,fs)
+
